@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>dropdown</title>
+      <link href="stylesheets/dropdown.css" media="screen, projection" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css">
+   </head>
+   <body>
+   		<form action="/action_page.php" method="get">
+	   		<select id="dropdown" name="settings">
+	   			<option icon="fa-user" value="Profile">Your Profile</option>
+	   			<option icon="fa-cog" value="Settings">Settings</option>
+	   			<option icon="fa-unlock-alt" value="Change Password">Change Password</option>
+	   			<option icon="fa-power-off" value="Logout">Logout</option>
+	   		</select>
+   			<button class="btn" type="submit" value="Submit">Submit</button>
+		</form>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="text/javascript">
+		$('#dropdown').dropdown();
+		$('#dropdown2').dropdown();
+	</script>
+   </body>
+</html>
