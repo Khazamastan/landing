@@ -68,7 +68,7 @@ body {
   display: block;
   cursor: pointer;
 }
-.dropdown > .dropdown-menu > ul > li a:hover {
+.dropdown > .dropdown-menu > ul > li a:hover, .dropdown > .dropdown-menu > ul > li a.active {
   background: #0d8c6a;
 }
 .dropdown > .dropdown-menu > ul > li a .fa {

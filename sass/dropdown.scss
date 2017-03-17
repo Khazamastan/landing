@@ -63,7 +63,7 @@ body{
 					font-weight: 600;
 				    display: block;
 				    cursor: pointer;
-				    &:hover{
+				    &:hover, &.active{
 				    	background: #0d8c6a;
 				    }
 				    .fa{
