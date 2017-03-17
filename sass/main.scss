@@ -1,0 +1,201 @@
+body{
+	color: #bdbdbd;
+	// font-family: 'Bonafide';
+	font-family: 'sansation';
+	// font-family: 'Bonafide Bold';
+}
+@include scrollbars(.5em, slategray);
+.navbar-fixed-top{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #f7f7f7;
+    box-shadow: 0 0 5px 1px #f7f7f7;
+	.scroll-down{
+		display: none;
+	}
+}
+.landing-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	.landing{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction : column;
+		.banner-row{
+			&:first-child{
+				width: 100%;
+				height: 70%;
+			}
+			&:last-child{
+				width: 100%;
+				height: 30%;
+			}
+			display: flex;
+			.single-banner{
+				background-size: cover;
+				height: 100%;
+				flex-grow : 1;
+				display: flex;
+				flex-direction : column;
+				background-position: center;
+				&:nth-child(4), &:nth-child(3){
+					@include MQ(S) {
+						display: none;
+					}
+				}
+				&:nth-child(4){
+					@include MQ(M) {
+						display: none;
+					}
+				}
+			}
+			@for $i from 1 to 11 {
+			  .bg-#{$i}{
+			    background-image: url('../images/#{$i}.jpg');
+			  }
+			}
+		}
+	}
+	.landing-content{
+	    position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    z-index: 2;
+	    top: 0;
+	    left: 0;
+	    background: rgba(8, 8, 8, 0.75);
+	    display: flex;
+	    justify-content : center;
+	    align-items : center;
+	    flex-direction : column;
+	    text-align: center;
+	    .logo{
+	    	width: 100px;
+	    	@include MQ(S) {
+	    		width: 70px;
+	    	}
+	    }
+	    h1{
+	    	font-size: 52px;
+	    	line-height: 52px;
+	    	font-weight: 600;
+	    }
+	    h2{
+	    	font-size: 28px;
+	    	line-height: 32px;
+	    	font-weight: 100;
+	    }
+	    .tagline-text{
+	    	font-size: 36px;
+	    	font-weight: 200;
+	    	line-height: 32px;
+	    	margin-top: 60px;
+	    	font-family: 'Raleway', sans-serif;
+	    	@include MQ(S) {
+	    		margin-top: 40px;
+	    	}
+	    }
+	    .starting-text{
+	    	font-size: 18px;
+	    	font-weight: 600;
+	    	text-transform: uppercase;
+	    	margin-top: 20px;
+	    	letter-spacing: 6px;
+	    	font-family: 'Raleway', sans-serif;
+	    	@include MQ(S) {
+	    		margin-top: 40px;
+	    		margin-bottom: 80px;
+	    	}
+	    }
+	    nav{
+	    	transition: all 300ms ease-in-out;
+	    	-moz-transition: all 300ms ease-in-out;
+	    	-webkit-transition: all 300ms ease-in-out;
+	    }
+	    ul{
+	    	position: absolute;
+	    	bottom: 0px;
+	    	width: 50%;
+	    	display: flex;
+    		left: 0;
+    		right: 0;
+    		margin: auto;
+	    	@include MQ(S) {
+	    		width: 100%;
+	    	}
+	    	>li{
+	    		flex-grow : 1;
+	    		display: inline-block;
+	    		text-align: center;
+    			width: 120px;
+    			@include MQ(S) {
+    				width: auto;
+    				flex:1;
+    			}
+	    		>a{
+	    			color: #bdbdbd;
+	    			font-family: 'Raleway', sans-serif;
+	    			font-weight: 400;
+	    			text-transform: uppercase;
+	    			height: 50px;
+	    			line-height: 50px;
+	    			position: relative;
+	    			cursor: pointer;
+	    			&:after{
+    				    content: '';
+					    width: 50%;
+					    height: 1px;
+					    background: #bdbdbd;
+					    display: inline-block;
+					    position: absolute;
+					    bottom: 0;
+					    left: 0;
+					    right: 0;
+					    margin: auto;
+					    top: 25px;
+	    			}
+	    		}
+    			&:hover{
+    				a{
+	    				color: #51aef0;
+	    				&:after{
+	    					background: #51aef0;
+	    				}
+    				}
+    			}
+    			&.scroll-down{
+    				@include MQ(S) {
+    					width: 30px;
+    					flex-grow: 0;
+    				}
+    				>a{
+    					&:before{
+    						content: '';
+		    				background: url('../images/down-arrow.svg');
+		    				height: 25px;
+		    				width: 25px;
+		    				background-size: 25px;
+		    				display: inline-block;
+	    				}
+    					&:after{
+    						content: '';
+    						background: url('../images/down-arrow.svg');
+	    					height: 25px;
+	    					width: 25px;
+	    					background-size: 25px;
+	    					display: inline-block;
+	    					top : 12px;
+    					}
+    				}
+    			}
+	    	}
+	    }
+	}
+}

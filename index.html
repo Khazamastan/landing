@@ -41,7 +41,7 @@
                <ul>
                   <li><a>Home</a></li>
                   <li><a>About</a></li>
-                  <li class="scroll-down"><a></a></li>
+                  <li class="scroll-down"><a id="goto-about" href="#about"></a></li>
                   <li><a>Contact</a></li>
                   <li><a>Catalog</a></li>
                </ul>
@@ -146,24 +146,6 @@
       <!-- End page content -->
    </div>
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-$(window).scroll(function () {
-    console.log($(window).scrollTop());
-    if ($(window).scrollTop() > ($(window).innerHeight()-60)) {
-      $('nav').addClass('navbar-fixed-top');
-    }
-    if ($(window).scrollTop() < ($(window).innerHeight()-60)) {
-      $('nav').removeClass('navbar-fixed-top');
-    }
-});
-</script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
