@@ -111,3 +111,10 @@ body {
 .btn:hover {
   background: #0d8c6a;
 }
+
+form {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
