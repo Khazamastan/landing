@@ -311,7 +311,7 @@ body{
 				}
 				width: 60%;
 				height: 100%;
-				.link{
+				> a{
 					display: inline-block;
 					width: 32.3%;
 					line-height: 34px;
@@ -512,7 +512,7 @@ body{
 				order : 1;
 				text-align: left;
 			}
-			.link{
+			> a{
 				display: inline-block;
 				line-height: 34px;
 				font-size: 12px; 
