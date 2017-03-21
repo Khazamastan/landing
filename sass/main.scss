@@ -6,6 +6,28 @@ body{
 	font-family: 'sansation';
 	// font-family: 'Bonafide Bold';
 }
+h3{
+	font-size: 24px;
+	font-weight: 400;
+	color: #000;
+	margin: 40px auto;
+	display: block;
+	text-align: center;
+	position: relative;
+	&:after {
+        content: '';
+	    width: 100px;
+	    height: 1px;
+	    background: #000;
+	    display: inline-block;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	    top: 38px;
+	}
+}
 // @include scrollbars(.5em, slategray);
 .navbar-fixed-top{
 	position: fixed;
@@ -243,18 +265,17 @@ body{
 	.button{
 		width: 40px;
 		height: 40px;
-		background: #fff;
+		background: #2f3138;
 		display: inline-block;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: lightgray;
 		margin: 4px;
 		text-decoration: none;
-		color: #000;
+		color: #bdbdbd;
 		&:hover{
-			background: #000;
-			color: #fff;
+			background: #bdbdbd;
+			color: #2f3138;
 		}
 	}
 }
